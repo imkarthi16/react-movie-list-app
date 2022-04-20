@@ -30,7 +30,7 @@ const MovieList = () => {
           <input
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search for"
+            placeholder="Search for movies"
           />
           <img
             src={SearchIcon}
@@ -46,14 +46,14 @@ const MovieList = () => {
             ))}
           </div>
         ) : (
-        //   <div className="empty">
-        //     <h2>No movies found</h2>
-        //   </div>
-          <div className="container">
-          {movies.map((movie) => (
-            <MovieCard movie={movie} />
-          ))}
-        </div>
+          <div className="empty">
+            <h2>No movies found</h2>
+          </div>
+        //   <div className="container">
+        //   {movies.map((movie) => (
+        //     <MovieCard movie={movie} />
+        //   ))}
+        // </div>
         )}
       </div>
     );
